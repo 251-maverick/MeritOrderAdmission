@@ -1,4 +1,3 @@
-package seatallocation;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -227,8 +226,6 @@ public void foreignAlloc(){
 		}
 	}
 }			
-		
-}
 /**
  * Implements seat deservation after phase 1
  * @return boolean It is true if de-reservation occurs else if none of the seats are dereserved it returns false
@@ -237,7 +234,7 @@ public boolean seatdereservation(){
 	boolean deresHappened=false;
 	for(String key:vpMap.keySet()){
 		String cat=key.substring(key.length()-1,key.length());
-		System.out.println(cat);
+		//System.out.println(cat);
 		if(cat.equals("0") || cat.equals("2") || cat.equals("3")) continue;
 		else if(cat.equals("1") || cat.equals("4") || cat.equals("5")){
 			VirtualProgramme p=vpMap.get(key);
@@ -331,13 +328,13 @@ public boolean seatdereservation(){
 	}
 }*/
 
-public void displayVpmap(){
+/*public void displayVpmap(){
 	System.out.println("vpmap ");
 	for(Map.Entry<String,VirtualProgramme> m:vpMap.entrySet()){
 		System.out.print(m.getKey()+" ");
 		m.getValue().displayQuota();m.getValue().displayCurrStr();
 	}
-}
+}*/
 
 /*public void displayCurrCand(){
 	System.out.println("Current cand ");
